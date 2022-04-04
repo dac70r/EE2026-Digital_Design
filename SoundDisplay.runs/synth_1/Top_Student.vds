@@ -1,0 +1,874 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Apr  5 01:51:02 2022
+# Process ID: 18868
+# Current directory: C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.runs/synth_1
+# Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
+# Log file: C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top_Student.tcl -notrace
+Command: synth_design -top Top_Student -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13768 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 373.020 ; gain = 116.582
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
+INFO: [Synth 8-6157] synthesizing module 'my_20hz_clock' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/my_20hz_clock.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'my_20hz_clock' (1#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/my_20hz_clock.v:3]
+INFO: [Synth 8-6157] synthesizing module 'debouncing_clock' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/debouncing_clock.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'debouncing_clock' (2#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/debouncing_clock.v:4]
+WARNING: [Synth 8-689] width (1) of port connection 'counter' does not match port width (4) of module 'debouncing_clock' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:66]
+INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (3#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+	Parameter Width bound to: 96 - type: integer 
+	Parameter Height bound to: 64 - type: integer 
+	Parameter PixelCount bound to: 6144 - type: integer 
+	Parameter PixelCountWidth bound to: 13 - type: integer 
+	Parameter ClkFreq bound to: 6250000 - type: integer 
+	Parameter FrameFreq bound to: 60 - type: integer 
+	Parameter FrameDiv bound to: 104166 - type: integer 
+	Parameter FrameDivWidth bound to: 17 - type: integer 
+	Parameter PowerDelay bound to: 20 - type: integer 
+	Parameter ResetDelay bound to: 3 - type: integer 
+	Parameter VccEnDelay bound to: 20 - type: integer 
+	Parameter StartupCompleteDelay bound to: 100 - type: integer 
+	Parameter MaxDelay bound to: 100 - type: integer 
+	Parameter MaxDelayCount bound to: 625000 - type: integer 
+	Parameter StateCount bound to: 32 - type: integer 
+	Parameter StateWidth bound to: 5 - type: integer 
+	Parameter PowerUp bound to: 5'b00000 
+	Parameter Reset bound to: 5'b00001 
+	Parameter ReleaseReset bound to: 5'b00011 
+	Parameter EnableDriver bound to: 5'b00010 
+	Parameter DisplayOff bound to: 5'b00110 
+	Parameter SetRemapDisplayFormat bound to: 5'b00111 
+	Parameter SetStartLine bound to: 5'b00101 
+	Parameter SetOffset bound to: 5'b00100 
+	Parameter SetNormalDisplay bound to: 5'b01100 
+	Parameter SetMultiplexRatio bound to: 5'b01101 
+	Parameter SetMasterConfiguration bound to: 5'b01111 
+	Parameter DisablePowerSave bound to: 5'b01110 
+	Parameter SetPhaseAdjust bound to: 5'b01010 
+	Parameter SetDisplayClock bound to: 5'b01011 
+	Parameter SetSecondPrechargeA bound to: 5'b01001 
+	Parameter SetSecondPrechargeB bound to: 5'b01000 
+	Parameter SetSecondPrechargeC bound to: 5'b11000 
+	Parameter SetPrechargeLevel bound to: 5'b11001 
+	Parameter SetVCOMH bound to: 5'b11011 
+	Parameter SetMasterCurrent bound to: 5'b11010 
+	Parameter SetContrastA bound to: 5'b11110 
+	Parameter SetContrastB bound to: 5'b11111 
+	Parameter SetContrastC bound to: 5'b11101 
+	Parameter DisableScrolling bound to: 5'b11100 
+	Parameter ClearScreen bound to: 5'b10100 
+	Parameter VccEn bound to: 5'b10101 
+	Parameter DisplayOn bound to: 5'b10111 
+	Parameter PrepareNextFrame bound to: 5'b10110 
+	Parameter SetColAddress bound to: 5'b10010 
+	Parameter SetRowAddress bound to: 5'b10011 
+	Parameter WaitNextFrame bound to: 5'b10001 
+	Parameter SendPixel bound to: 5'b10000 
+	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
+	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
+INFO: [Synth 8-226] default block is never used [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (4#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'D_FF' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'D_FF' (5#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:3]
+WARNING: [Synth 8-350] instance 'd1' of module 'D_FF' requires 4 connections, but only 3 given [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:86]
+WARNING: [Synth 8-350] instance 'd2' of module 'D_FF' requires 4 connections, but only 3 given [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:87]
+WARNING: [Synth 8-350] instance 'd3' of module 'D_FF' requires 4 connections, but only 3 given [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:92]
+WARNING: [Synth 8-350] instance 'd4' of module 'D_FF' requires 4 connections, but only 3 given [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:93]
+INFO: [Synth 8-6157] synthesizing module 'pixel_converter' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/coordinates.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_converter' (6#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/coordinates.v:3]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/top_student.v:4]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/clock_divider.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (7#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/clock_divider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'refreshcounter' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/refreshcounter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'refreshcounter' (8#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/refreshcounter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'anode_control' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/anode_control.v:3]
+WARNING: [Synth 8-567] referenced signal 'switcher' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/anode_control.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'anode_control' (9#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/anode_control.v:3]
+INFO: [Synth 8-6157] synthesizing module 'BCD_control' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:17]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:29]
+WARNING: [Synth 8-567] referenced signal 'switcherer' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+WARNING: [Synth 8-567] referenced signal 'digit1' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+WARNING: [Synth 8-567] referenced signal 'digit2' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+WARNING: [Synth 8-567] referenced signal 'digit3' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+WARNING: [Synth 8-567] referenced signal 'digit4' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+WARNING: [Synth 8-567] referenced signal 'loudnesses' should be on the sensitivity list [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'BCD_control' (10#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'digit1' does not match port width (4) of module 'BCD_control' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/top_student.v:21]
+WARNING: [Synth 8-689] width (32) of port connection 'digit2' does not match port width (4) of module 'BCD_control' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/top_student.v:22]
+WARNING: [Synth 8-689] width (2) of port connection 'refreshcounter' does not match port width (4) of module 'BCD_control' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/top_student.v:25]
+INFO: [Synth 8-6157] synthesizing module 'BCD_to_Cathodez' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_to_Cathodez.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'BCD_to_Cathodez' (11#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_to_Cathodez.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment' (12#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/top_student.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:4285]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:4335]
+INFO: [Synth 8-6157] synthesizing module 'image' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'image' (13#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image.v:2]
+INFO: [Synth 8-6157] synthesizing module 'image2' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/too_loud.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/too_loud.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image2' (14#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/too_loud.v:2]
+INFO: [Synth 8-6157] synthesizing module 'image3' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/sub-menu2_clean.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/sub-menu2_clean.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image3' (15#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/sub-menu2_clean.v:2]
+INFO: [Synth 8-6157] synthesizing module 'image4' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image4.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image4.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'image4' (16#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image4.v:2]
+INFO: [Synth 8-6157] synthesizing module 'image5' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image5.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'image5' (17#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image5.v:2]
+WARNING: [Synth 8-6014] Unused sequential element decibel_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:154]
+WARNING: [Synth 8-6014] Unused sequential element c_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:4255]
+WARNING: [Synth 8-6014] Unused sequential element d_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:4256]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (18#1) [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/Top_Student.v:18]
+WARNING: [Synth 8-3331] design BCD_control has unconnected port digit3[4]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[31]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[30]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[29]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[28]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[27]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[26]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[25]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[24]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[23]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[22]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[21]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[20]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[19]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[18]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[17]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[16]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[15]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[14]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[13]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[12]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[11]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[10]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[9]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[8]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[7]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[6]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[5]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[4]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[31]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[30]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[29]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[28]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[27]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[26]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[25]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[24]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[23]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[22]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[21]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[20]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[19]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[18]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[17]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[16]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[15]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[14]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[13]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[12]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[11]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[10]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[9]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[8]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[7]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[6]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[5]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 557.980 ; gain = 301.543
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 557.980 ; gain = 301.543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 557.980 ; gain = 301.543
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 839.789 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ONE_DIGIT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "ONE_DIGIT" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image.v:10]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/too_loud.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/sub-menu2_clean.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image4.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image5.v:10]
+INFO: [Synth 8-5545] ROM "countering" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_peak" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6040] Register current_peak_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-5545] ROM "countering" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_peak" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "led" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "oled_data_B" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6040] Register current_peak_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 PowerUp | 00000000100000000000000000000000 |                            00000
+                   Reset | 00000000000100000000000000000000 |                            00001
+            ReleaseReset | 00000000000000000000100000000000 |                            00011
+            EnableDriver | 00000000000000000001000000000000 |                            00010
+              DisplayOff | 00000000000000000100000000000000 |                            00110
+   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
+            SetStartLine | 00001000000000000000000000000000 |                            00101
+               SetOffset | 10000000000000000000000000000000 |                            00100
+        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
+       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
+  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
+        DisablePowerSave | 00000000000000000000000000000100 |                            01110
+          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
+         SetDisplayClock | 00000000001000000000000000000000 |                            01011
+     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
+     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
+     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
+       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
+                SetVCOMH | 00000000000000010000000000000000 |                            11011
+        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
+            SetContrastA | 00000000000001000000000000000000 |                            11110
+            SetContrastB | 00100000000000000000000000000000 |                            11111
+            SetContrastC | 00000000000000000000000000000001 |                            11101
+        DisableScrolling | 00000000000000000000000000000010 |                            11100
+             ClearScreen | 00000000000000000000000000010000 |                            10100
+                   VccEn | 00010000000000000000000000000000 |                            10101
+               DisplayOn | 00000000000010000000000000000000 |                            10111
+        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
+           SetColAddress | 00000000000000000000010000000000 |                            10010
+           SetRowAddress | 00000000000000000000000100000000 |                            10011
+           WaitNextFrame | 00000000000000000000001000000000 |                            10001
+               SendPixel | 00000000000000000010000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+WARNING: [Synth 8-327] inferring latch for variable 'ONE_DIGIT_reg' [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/7_Segment_Display_Controller/7_Segment_Display_Controller.srcs/sources_1/new/BCD_control.v:19]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	               12 Bit    Registers := 5     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---ROMs : 
+	                              ROMs := 5     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 11    
+	   2 Input     12 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   7 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Top_Student 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 11    
+	   2 Input     12 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 1     
+Module my_20hz_clock 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module debouncing_clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+Module Audio_Capture 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module D_FF 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module clock_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module refreshcounter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+Module anode_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module BCD_control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module image 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module image2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module image3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module image4 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module image5 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element clock_5/my_clock_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/my_20hz_clock.v:11]
+INFO: [Synth 8-5545] ROM "clock_1/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock_2/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock_3/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock_4/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "countering" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_peak" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "freq_10hz/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image.v:10]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/too_loud.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/sub-menu2_clean.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image4.v:11]
+WARNING: [Synth 8-6014] Unused sequential element pixel_data_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/image5.v:10]
+WARNING: [Synth 8-6014] Unused sequential element d1/Q_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:8]
+WARNING: [Synth 8-6014] Unused sequential element d1/Qbar_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:9]
+WARNING: [Synth 8-6014] Unused sequential element d2/Q_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:8]
+WARNING: [Synth 8-6014] Unused sequential element d2/Qbar_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:9]
+WARNING: [Synth 8-6014] Unused sequential element d3/Q_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:8]
+WARNING: [Synth 8-6014] Unused sequential element d3/Qbar_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:9]
+WARNING: [Synth 8-6014] Unused sequential element d4/Q_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:8]
+WARNING: [Synth 8-6014] Unused sequential element d4/Qbar_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/D_FF.v:9]
+WARNING: [Synth 8-6014] Unused sequential element clock_2/my_clock_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/my_20hz_clock.v:11]
+WARNING: [Synth 8-6014] Unused sequential element clock_4/my_clock_reg was removed.  [C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.srcs/sources_1/new/my_20hz_clock.v:11]
+INFO: [Synth 8-5545] ROM "clock_1/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "countering" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_peak" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock_3/my_clock0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6040] Register current_peak_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-3917] design Top_Student has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design Top_Student has port led[5] driven by constant 0
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[31]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[30]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[29]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[28]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[27]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[26]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[25]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[24]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[23]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[22]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[21]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[20]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[19]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[18]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[17]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[16]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[15]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[14]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[13]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[12]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[11]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[10]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[9]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[8]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[7]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[6]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[5]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port a[4]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[31]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[30]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[29]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[28]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[27]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[26]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[25]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[24]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[23]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[22]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[21]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[20]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[19]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[18]
+WARNING: [Synth 8-3331] design seven_segment has unconnected port b[17]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (b_reg[28]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[27]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[26]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[25]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[24]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[23]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[22]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[21]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[20]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[19]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[18]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[17]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[16]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[15]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[14]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[13]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[12]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[11]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[10]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[9]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[8]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[7]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[6]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[5]) is unused and will be removed from module Top_Student.
+WARNING: [Synth 8-3332] Sequential element (b_reg[4]) is unused and will be removed from module Top_Student.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:33 ; elapsed = 00:02:36 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+----------------+---------------+----------------+
+|Module Name | RTL Object     | Depth x Width | Implemented As | 
++------------+----------------+---------------+----------------+
+|image       | pixel_data     | 8192x1        | LUT            | 
+|image       | pixel_data_reg | 8192x16       | Block RAM      | 
+|image2      | pixel_data     | 8192x1        | LUT            | 
+|image2      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image3      | pixel_data     | 8192x1        | LUT            | 
+|image3      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image4      | pixel_data     | 8192x1        | LUT            | 
+|image4      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image5      | pixel_data     | 8192x1        | LUT            | 
+|image5      | pixel_data_reg | 8192x16       | Block RAM      | 
+|Top_Student | decibel        | 4096x7        | LUT            | 
+|image       | pixel_data     | 8192x1        | LUT            | 
+|image       | pixel_data_reg | 8192x16       | Block RAM      | 
+|image2      | pixel_data     | 8192x1        | LUT            | 
+|image2      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image3      | pixel_data     | 8192x1        | LUT            | 
+|image3      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image4      | pixel_data     | 8192x1        | LUT            | 
+|image4      | pixel_data_reg | 8192x16       | Block RAM      | 
+|image5      | pixel_data     | 8192x1        | LUT            | 
+|image5      | pixel_data_reg | 8192x16       | Block RAM      | 
+|Top_Student | decibel        | 4096x7        | LUT            | 
++------------+----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance i_0/zero_to_fourty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_0/zero_to_fourty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_0/zero_to_fourty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_0/zero_to_fourty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_1/fourty_to_fifty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_1/fourty_to_fifty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_1/fourty_to_fifty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_1/fourty_to_fifty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_2/fifty_to_sixty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_2/fifty_to_sixty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_2/fifty_to_sixty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_2/fifty_to_sixty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_3/sixty_to_seventy_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_3/sixty_to_seventy_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_3/sixty_to_seventy_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_3/sixty_to_seventy_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_4/seventy_to_eighty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_4/seventy_to_eighty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_4/seventy_to_eighty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance i_4/seventy_to_eighty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:41 ; elapsed = 00:02:45 . Memory (MB): peak = 839.789 ; gain = 583.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:41 ; elapsed = 00:02:45 . Memory (MB): peak = 854.398 ; gain = 597.961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance zero_to_fourty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance zero_to_fourty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance zero_to_fourty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance zero_to_fourty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fourty_to_fifty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fourty_to_fifty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fourty_to_fifty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fourty_to_fifty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fifty_to_sixty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fifty_to_sixty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fifty_to_sixty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance fifty_to_sixty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance sixty_to_seventy_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance sixty_to_seventy_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance sixty_to_seventy_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance sixty_to_seventy_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance seventy_to_eighty_db/pixel_data_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance seventy_to_eighty_db/pixel_data_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance seventy_to_eighty_db/pixel_data_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance seventy_to_eighty_db/pixel_data_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:42 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:43 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:43 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     3|
+|2     |CARRY4      |   121|
+|3     |LUT1        |    24|
+|4     |LUT2        |   174|
+|5     |LUT3        |   140|
+|6     |LUT4        |   182|
+|7     |LUT5        |    86|
+|8     |LUT6        |   242|
+|9     |MUXF7       |     2|
+|10    |RAMB36E1    |     1|
+|11    |RAMB36E1_1  |     1|
+|12    |RAMB36E1_10 |     1|
+|13    |RAMB36E1_11 |     1|
+|14    |RAMB36E1_12 |     1|
+|15    |RAMB36E1_13 |     1|
+|16    |RAMB36E1_14 |     1|
+|17    |RAMB36E1_15 |     1|
+|18    |RAMB36E1_16 |     1|
+|19    |RAMB36E1_17 |     1|
+|20    |RAMB36E1_18 |     1|
+|21    |RAMB36E1_19 |     1|
+|22    |RAMB36E1_2  |     1|
+|23    |RAMB36E1_3  |     1|
+|24    |RAMB36E1_4  |     1|
+|25    |RAMB36E1_5  |     1|
+|26    |RAMB36E1_6  |     1|
+|27    |RAMB36E1_7  |     1|
+|28    |RAMB36E1_8  |     1|
+|29    |RAMB36E1_9  |     1|
+|30    |FDE_1       |    32|
+|31    |FDRE        |   303|
+|32    |FDSE        |     6|
+|33    |LD          |     4|
+|34    |IBUF        |     7|
+|35    |OBUF        |    33|
++------+------------+------+
+
+Report Instance Areas: 
++------+--------------------------+----------------+------+
+|      |Instance                  |Module          |Cells |
++------+--------------------------+----------------+------+
+|1     |top                       |                |  1379|
+|2     |  audio_capture           |Audio_Capture   |    79|
+|3     |  clock_1                 |my_20hz_clock   |    52|
+|4     |  clock_3                 |my_20hz_clock_0 |    52|
+|5     |  fifty_to_sixty_db       |image3          |     4|
+|6     |  fourty_to_fifty_db      |image2          |     4|
+|7     |  oled_display            |Oled_Display    |   424|
+|8     |  seventy_to_eighty_db    |image5          |    17|
+|9     |  sixty_to_seventy_db     |image4          |    27|
+|10    |  topstudenWrapper        |seven_segment   |    78|
+|11    |    BCDtocathodezWrapper  |BCD_to_Cathodez |     3|
+|12    |    bcdWrapper            |BCD_control     |    10|
+|13    |    freq_10hz             |clock_divider   |    53|
+|14    |    refreshcounterWrapper |refreshcounter  |    12|
+|15    |  zero_to_fourty_db       |image           |     4|
++------+--------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 115 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:27 ; elapsed = 00:02:39 . Memory (MB): peak = 856.812 ; gain = 318.566
+Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:02:47 . Memory (MB): peak = 856.812 ; gain = 600.375
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  FDE_1 => FDRE (inverted pins: C): 32 instances
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+129 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:45 ; elapsed = 00:02:50 . Memory (MB): peak = 856.812 ; gain = 613.367
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/denni/Desktop/EE2026 Digital Design/EE2026 Labs/LAB Project/SoundDisplay_March13_2022/SoundDisplay.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 856.812 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  5 01:53:56 2022...
